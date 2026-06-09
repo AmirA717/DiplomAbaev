@@ -50,13 +50,18 @@ export type GameType =
   | 'QUIZ_SIMULATION'
   | 'PHISHING_DETECTOR'
   | 'PASSWORD_STRENGTH'
-  | 'SOCIAL_NETWORK_SCENARIO';
+  | 'SOCIAL_NETWORK_SCENARIO'
+  | 'MFA_CHALLENGE'
+  | 'UPDATE_TRIAGE'
+  | 'BACKUP_STRATEGY'
+  | 'SAFE_DOWNLOADS'
+  | 'APP_PERMISSION_AUDIT';
 
 export interface Game {
   id: number;
   title: string;
   type: GameType;
-  config: Record<string, unknown> | null;
+  config: unknown | null;
   topicId: number;
   order: number;
   isPublished: boolean;
